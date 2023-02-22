@@ -5,15 +5,19 @@ function sharableURL() {
 	var nameElement = document.getElementById("name").value;
 	var yearElement = document.getElementById("year").value;
 	if(nameElement&&yearElement){
-		url=url+"?name="+nameElement+"&year="+yearElement;
+		url="https://localhost:8080/?name="+nameElement+"&year="+yearElement;
 		document.getElementById("url").textContent = url;
 	}
 	else if(nameElement&&!yearElement){
-		url=url+"?name="+nameElement;
+		url="https://localhost:8080/?name="+nameElement;
 		document.getElementById("url").textContent = url;
 	}
 	else if(yearElement&&!nameElement){
-		url=url+"?year="+yearElement;
+		url="https://localhost:8080/?year="+yearElement;
+		document.getElementById("url").textContent = url;
+	}
+	else{
+		url="https://localhost:8080/";
 		document.getElementById("url").textContent = url;
 	}
 }
