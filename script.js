@@ -8,11 +8,11 @@ function sharableURL() {
 		url=url+"?name="+nameElement+"&year="+yearElement;
 		document.getElementById("url").textContent = url;
 	}
-	else if(nameElement){
+	else if(nameElement&&!yearElement){
 		url=url+"?name="+nameElement;
 		document.getElementById("url").textContent = url;
 	}
-	else if(yearElement){
+	else if(yearElement&&!nameElement){
 		url=url+"?year="+yearElement;
 		document.getElementById("url").textContent = url;
 	}
